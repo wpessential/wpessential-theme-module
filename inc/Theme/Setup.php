@@ -40,22 +40,16 @@ final class Setup
 
 	public static function constants ()
 	{
+		if ( ! function_exists( 'wpe_theme_info' ) ) {
+			return;
+		}
 		$theme_info = wpe_theme_info();
 
-		$theme_constant = [];
-		if ( $theme_info->Parent ) {
-			$theme_constant = [
-					"{$theme_info->Parent->UcwordsNameHyphen}_T_DIR" => get_parent_theme_file_path() . '/',
-					"{$theme_info->Parent->UcwordsNameHyphen}_T_URI" => get_parent_theme_file_uri() . '/',
-					"{$theme_info->Parent->UcwordsNameHyphen}_T_VER" => $theme_info->Version,
-			];
-		}
-
-		$theme_constant = wp_parse_args( [
+		$theme_constant = [
 				"{$theme_info->UcwordsNameHyphen}_T_VER" => $theme_info->Version,
 				"{$theme_info->UcwordsNameHyphen}_T_DIR" => get_stylesheet_directory() . '/',
 				"{$theme_info->UcwordsNameHyphen}_T_URI" => get_stylesheet_directory_uri() . '/',
-		], $theme_constant );
+		];
 
 		$theme_constant = array_filter( apply_filters( 'wpe/theme_constant', $theme_constant ) );
 		if ( ! empty( $theme_constant ) ) {
@@ -68,13 +62,10 @@ final class Setup
 
 	public static function theme_clases ()
 	{
-		$theme_info = wpe_theme_info();
-		if ( $theme_info->Parent ) {
-			$theme_loader = "\\WPEssential\\Theme\\{$theme_info->Parent->NameSpace}\\Loader";
-			if ( class_exists( $theme_loader ) ) {
-				$theme_loader::constructor();
-			}
+		if ( ! function_exists( 'wpe_theme_info' ) ) {
+			return;
 		}
+		$theme_info   = wpe_theme_info();
 		$theme_loader = "\\WPEssential\\Theme\\{$theme_info->NameSpace}\\Loader";
 		if ( class_exists( $theme_loader ) ) {
 			$theme_loader::constructor();
