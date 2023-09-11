@@ -3,15 +3,13 @@
 	"type": "library",
 	"description": "It used to build and run the wp query and return the results.",
 	"keywords": [
-		"query",
-		"wp-query"
+		"theme"
 	],
 	"homepage": "https://wpessential.org/",
-	"require": {
-	},
+	"require": {},
 	"autoload": {
 		"psr-4": {
-			"WPEssentialQueryBuilder\\": "src/"
+			"WPEssential\\Plugins\\Theme\\": "src/Theme"
 		}
 	}
 }
