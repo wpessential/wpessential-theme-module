@@ -13,15 +13,15 @@ if ( '1' === $comments_number ) {
 else {
 	printf(
 	/* translators: 1: Number of comments, 2: Post title. */
-			_nx(
-					'%1$s Reply to &ldquo;%2$s&rdquo;',
-					'%1$s Replies to &ldquo;%2$s&rdquo;',
-					$comments_number,
-					'comments title',
-					'twentyseventeen'
-			),
-			number_format_i18n( $comments_number ),
-			get_the_title()
+		_nx(
+			'%1$s Reply to &ldquo;%2$s&rdquo;',
+			'%1$s Replies to &ldquo;%2$s&rdquo;',
+			$comments_number,
+			'comments title',
+			'twentyseventeen'
+		),
+		number_format_i18n( $comments_number ),
+		get_the_title()
 	);
 }
 ?>
