@@ -1,6 +1,7 @@
 {
-	"name": "wpessential-hero/wpessential-hero",
+	"name": "wpessential/wpessential-hero",
 	"type": "library",
+	"version": "1.0",
 	"description": "It used to build and run the wp query and return the results.",
 	"keywords": [
 		"theme"
