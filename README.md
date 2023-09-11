@@ -1,4 +1,4 @@
-# WPEssential Theme 1.0
+# WPEssential Theme Module 1.0
 
 Help to build the WP theme
 
