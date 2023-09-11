@@ -14,8 +14,6 @@ final class SetupInit
 		self::theme_clases();
 		self::setup_actions();
 
-		require_once __DIR__ . '/Functions.php';
-
 		add_action(
 			'wpe_setup_theme',
 			function () {
