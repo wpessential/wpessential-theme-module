@@ -13,21 +13,5 @@
 		"psr-4": {
 			"WPEssentialQueryBuilder\\": "src/"
 		}
-	},
-	"scripts": {
-		"test": [
-			"@phpunit",
-			"@style-check"
-		],
-		"style-check": [
-			"@phpcs",
-			"@phpstan",
-			"@phpmd"
-		],
-		"phpunit": "phpunit --verbose",
-		"phpcs": "php-cs-fixer fix -v --diff --dry-run",
-		"phpstan": "phpstan analyse --configuration phpstan.neon --level 3 src tests",
-		"phpmd": "phpmd src text /phpmd.xml",
-		"phpdoc": "php phpdoc.php"
 	}
 }
