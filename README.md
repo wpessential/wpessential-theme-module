@@ -1,2 +1,2 @@
-# wpessential-hero-theme
+# wpessential-hero
 Helping theme for theme building
