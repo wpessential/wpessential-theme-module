@@ -69,39 +69,35 @@ final class SetupInit
 	public static function setup_actions ()
 	{
 		$action_list = apply_filters( 'wpe/theme/after_setup/hooks', [
-			'Support'       => [
+			'Support'  => [
 				'callback' => [ 'WPEssential\Theme\Setup\Support', 'constructor' ],
 				'priority' => 10
 			],
-			'Sidebars'      => [
+			'Sidebars' => [
 				'callback' => [ 'WPEssential\Theme\Setup\Sidebars', 'constructor' ],
 				'priority' => 20
 			],
-			'Widgets'       => [
+			'Widgets'  => [
 				'callback' => [ 'WPEssential\Theme\Setup\Widgets', 'constructor' ],
 				'priority' => 30
 			],
-			'Images'        => [
+			'Images'   => [
 				'callback' => [ 'WPEssential\Theme\Setup\Images', 'constructor' ],
 				'priority' => 40
 			],
-			'Menus'         => [
+			'Menus'    => [
 				'callback' => [ 'WPEssential\Theme\Setup\Menus', 'constructor' ],
 				'priority' => 50
 			],
-			'Tgm'           => [
-				'callback' => [ 'WPEssential\Plugins\Utility\Tgm', 'constructor' ],
+			'Tgm'      => [
+				'callback' => [ 'WPEssential\Plugins\Assets\Tgm', 'constructor' ],
 				'priority' => 60
-			],
-			'OptionsPannel' => [
-				'callback' => [ 'WPEssential\Plugins\Utility\OptionsPannel', 'constructor' ],
-				'priority' => 70
 			],
 		] );
 
 		if ( ! empty( $action_list ) ) {
 			foreach ( $action_list as $key => $action ) {
-				if ( ! wpe_array_get( $action, 'callback' ) && ! wpe_array_get( $action, 'priority' ) ) {
+				if ( ! wpe_array_get( $action, 'callback' ) && ! wpe_array_get( $action, 'priority' ) && class_exists( wpe_array_get( $action, 'callback' ) ) ) {
 					wp_die( __( "(wpe/theme/after_setup/hooks) => {$key} have no callback or priority", 'wpessential' ) );
 				}
 				add_action( 'wpe_before_theme_setup', wpe_array_get( $action, 'callback' ), wpe_array_get( $action, 'priority' ) );
