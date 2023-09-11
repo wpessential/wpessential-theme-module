@@ -1,6 +1,6 @@
 <?php
 
-namespace WPEssential\Plugins\Theme;
+namespace WPEssential\Theme\Setup;
 
 if ( ! \defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.

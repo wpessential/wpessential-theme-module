@@ -3,7 +3,7 @@
  * Copyright (c) 2020. This file is copyright by WPEssential.
  */
 
-namespace WPEssential\Plugins\Theme;
+namespace WPEssential\Theme\Setup;
 
 if ( ! \defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
