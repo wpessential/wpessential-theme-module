@@ -10,7 +10,7 @@
 	"require": {},
 	"autoload": {
 		"psr-4": {
-			"WPEssential\\Theme\\": "inc"
+			"WPEssential\\Theme\\": "inc/"
 		}
 	}
 }
