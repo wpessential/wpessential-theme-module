@@ -10,7 +10,7 @@
 	"require": {},
 	"autoload": {
 		"psr-4": {
-			"WPEssential\\Plugins\\Theme\\": "src/Theme"
+			"WPEssential\\Plugins\\Theme\\": "inc/Theme"
 		}
 	}
 }
