@@ -479,13 +479,7 @@ final class Support
 	{
 		$default = apply_filters(
 			'wpe/themes/support/allow/others',
-			[
-				'title-tag',
-				'widgets',
-				'automatic-feed-links',
-				'customize-selective-refresh-widgets',
-				'buddypress'
-			]
+			[]
 		);
 
 		if ( ! empty( $default ) ) {
@@ -493,5 +487,11 @@ final class Support
 				add_theme_support( $set );
 			}
 		}
+		
+		add_theme_support( 'title-tag' );
+		add_theme_support( 'widgets' );
+		add_theme_support( 'automatic-feed-links' );
+		add_theme_support( 'customize-selective-refresh-widgets' );
+		add_theme_support( 'buddypress' );
 	}
 }
