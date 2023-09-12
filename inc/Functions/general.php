@@ -34,7 +34,7 @@ if ( ! function_exists( 'wpe_template_load' ) ) {
 		$error = new WP_Error(
 			[
 				404,
-				sprintf( __( 'File %s not found' ), basename( $find_in ) ),
+				sprintf( __( 'File %s not found', 'wpessential' ), basename( $find_in ) ),
 				$path
 			]
 		);
