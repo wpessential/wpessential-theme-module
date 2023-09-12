@@ -19,6 +19,7 @@ final class Loader
 
 	public static function load_files ()
 	{
+		require_once __DIR__ . '/Functions/general.php';
 		require_once __DIR__ . '/Functions/template.php';
 	}
 

@@ -24,7 +24,7 @@ final class SetupInit
 						add_action( 'wp_head', function () {
 							?>
 							<meta http-equiv="X-UA-Compatible" content="IE=edge"><!--X-UA-Compatible is a document mode meta tag that allows web authors to choose what version of Internet Explorer the page should be rendered as-->
-							<meta name="generator" content="WPEssential <?php echo WPE_VERSION; ?>" />
+							<meta name="generator" content="WPEssential Theme Module <?php echo WPE_THEME_VERSION; ?>" />
 							<meta name="HandheldFriendly" content="True"><!--Include this tag in the head element of every page. This tells your M-Business Sync Server that you have optimized your page for being viewed on a mobile device. Without it, tables, JavaScript and certain image tags will be dropped when the page is downloaded.--->
 							<?php
 						} );
