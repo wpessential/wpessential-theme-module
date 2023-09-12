@@ -61,9 +61,8 @@ final class Sidebars
 		);
 
 		if ( ! empty( $sidebars ) ) {
-			$reg_sid = 'regi' . 'ster' . '_sid' . 'ebar';
 			foreach ( $sidebars as $sidebar ) {
-				$reg_sid( $sidebar );
+				register_sidebar( $sidebar );
 			}
 		}
 	}
