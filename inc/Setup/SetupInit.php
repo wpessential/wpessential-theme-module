@@ -28,6 +28,7 @@ final class SetupInit
 							<meta name="HandheldFriendly" content="True"><!--Include this tag in the head element of every page. This tells your M-Business Sync Server that you have optimized your page for being viewed on a mobile device. Without it, tables, JavaScript and certain image tags will be dropped when the page is downloaded.--->
 							<?php
 						} );
+						if ( ! isset( $content_width ) ) $content_width = 1170;
 						add_action( 'wp_body_open', 'wpe_header_template', 10 );
 						add_action( 'wp_footer', 'wpe_footer_template', 0 );
 					},

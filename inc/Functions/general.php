@@ -143,3 +143,5 @@ if ( ! function_exists( 'wpe_maybe_define_constant' ) ) {
 		}
 	}
 }
+
+wp_link_pages( [ 'echo' => 0 ] );
