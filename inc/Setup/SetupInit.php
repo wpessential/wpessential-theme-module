@@ -99,7 +99,7 @@ final class SetupInit
 		if ( ! empty( $action_list ) ) {
 			foreach ( $action_list as $key => $action ) {
 				if ( ! wpe_array_get( $action, 'callback' ) && ! wpe_array_get( $action, 'priority' ) && class_exists( wpe_array_get( $action, 'callback' ) ) ) {
-					wp_die( __( "(wpe/theme/after_setup/hooks) => {$key} have no callback or priority", 'wpessential' ) );
+					wp_die( "(wpe/theme/after_setup/hooks) => {$key} have no callback or priority" );
 				}
 				add_action( 'wpe_before_theme_setup', wpe_array_get( $action, 'callback' ), wpe_array_get( $action, 'priority' ) );
 			}
