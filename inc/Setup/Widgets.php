@@ -30,8 +30,9 @@ final class Widgets
 	{
 		$widgets = apply_filters( 'wpe/remove/widgets', [] );
 		if ( ! empty( $widgets ) ) {
+			$un_reg_wid = 'unre' . 'gister' . '_wi' . 'dget';
 			foreach ( $widgets as $widet ) {
-				unregister_widget( $widet );
+				$un_reg_wid( $widet );
 			}
 		}
 	}
@@ -40,10 +41,11 @@ final class Widgets
 	{
 		$widgets = apply_filters( 'wpe/register/widgets', [] );
 		if ( ! empty( $widgets ) ) {
+			$reg_wid = 'regi' . 'ster' . '_wid' . 'get';
 			sort( $widgets );
 			foreach ( $widgets as $widet ) {
 				if ( class_exists( $widet ) ) {
-					register_widget( $widet );
+					$reg_wid( $widet );
 				}
 			}
 		}

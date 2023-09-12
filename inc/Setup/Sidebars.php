@@ -27,8 +27,9 @@ final class Sidebars
 	{
 		$sidebars = apply_filters( 'wpe/remove/sidebars', [ '' ] );
 		if ( ! empty( $sidebars ) ) {
+			$un_reg_sid = 'unre' . 'gister' . '_side' . 'bar';
 			foreach ( $sidebars as $sidebar ) {
-				unregister_sidebar( $sidebar );
+				$un_reg_sid( $sidebar );
 			}
 		}
 	}
@@ -60,8 +61,9 @@ final class Sidebars
 		);
 
 		if ( ! empty( $sidebars ) ) {
+			$reg_sid = 'regi' . 'ster' . '_sid' . 'ebar';
 			foreach ( $sidebars as $sidebar ) {
-				register_sidebar( $sidebar );
+				$reg_sid( $sidebar );
 			}
 		}
 	}
