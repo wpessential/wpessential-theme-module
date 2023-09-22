@@ -23,13 +23,13 @@ final class SetupInit
 					function () {
 						add_action( 'wp_head', function () {
 							?>
-							<meta http-equiv="X-UA-Compatible" content="IE=edge"><!--X-UA-Compatible is a document mode meta tag that allows web authors to choose what version of Internet Explorer the page should be rendered as-->
+							<meta http-equiv="X-UA-Compatible" content="IE=edge"><!--X-UA-Compatible is a document mode meta-tag that allows web authors to choose what version of Internet Explorer the page should be rendered as-->
 							<meta name="generator" content="WPEssential Theme Module <?php echo WPE_THEME_VERSION; ?>" />
 							<meta name="HandheldFriendly" content="True"><!--Include this tag in the head element of every page. This tells your M-Business Sync Server that you have optimized your page for being viewed on a mobile device. Without it, tables, JavaScript and certain image tags will be dropped when the page is downloaded.--->
 							<?php
 						} );
 						if ( ! isset( $content_width ) ) $content_width = 1170;
-						add_action( 'wp_body_open', 'wpe_header_template', 10 );
+						add_action( 'wp_body_open', 'wpe_header_template' );
 						add_action( 'wp_footer', 'wpe_footer_template', 0 );
 					},
 					2000
@@ -99,7 +99,7 @@ final class SetupInit
 		if ( ! empty( $action_list ) ) {
 			foreach ( $action_list as $key => $action ) {
 				if ( ! wpe_array_get( $action, 'callback' ) && ! wpe_array_get( $action, 'priority' ) && class_exists( wpe_array_get( $action, 'callback' ) ) ) {
-					$error = "(wpe/theme/after_setup/hooks) => {$key} have no callback or priority";
+					$error = "(wpe/theme/after_setup/hooks) => {$key} " . __( 'have no callback or priority', 'wpessential' );
 					wp_die( $error );
 				}
 				add_action( 'wpe_before_theme_setup', wpe_array_get( $action, 'callback' ), wpe_array_get( $action, 'priority' ) );
