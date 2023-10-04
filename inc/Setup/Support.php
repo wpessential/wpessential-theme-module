@@ -21,7 +21,7 @@ final class Support
 		self::formats();
 		self::thumbnails();
 		self::excerpt();
-		if ( function_exists( 'WC' ) ) {
+		if ( \function_exists( 'WC' ) ) {
 			self::woocommerce();
 		}
 		self::gutanbarg();
@@ -487,7 +487,7 @@ final class Support
 				add_theme_support( $set );
 			}
 		}
-		
+
 		add_theme_support( 'title-tag' );
 		add_theme_support( 'widgets' );
 		add_theme_support( 'automatic-feed-links' );

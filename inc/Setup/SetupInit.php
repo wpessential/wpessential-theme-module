@@ -8,6 +8,7 @@ if ( ! \defined( 'ABSPATH' ) ) {
 
 final class SetupInit
 {
+
 	public static function constructor ()
 	{
 		self::constants();
@@ -18,26 +19,28 @@ final class SetupInit
 			'wpe_setup_theme',
 			function () {
 				do_action( 'wpe_before_theme_setup' );
-				add_action(
-					'after_setup_theme',
-					function () {
-						add_action( 'wp_head', function () {
-							?>
-							<meta http-equiv="X-UA-Compatible" content="IE=edge"><!--X-UA-Compatible is a document mode meta-tag that allows web authors to choose what version of Internet Explorer the page should be rendered as-->
-							<meta name="generator" content="WPEssential Theme Module <?php echo WPE_THEME_VERSION; ?>" />
-							<meta name="HandheldFriendly" content="True"><!--Include this tag in the head element of every page. This tells your M-Business Sync Server that you have optimized your page for being viewed on a mobile device. Without it, tables, JavaScript and certain image tags will be dropped when the page is downloaded.--->
-							<?php
-						} );
-						if ( ! isset( $content_width ) ) $content_width = 1170;
-						add_action( 'wp_body_open', 'wpe_header_template' );
-						add_action( 'wp_footer', 'wpe_footer_template', 0 );
-					},
-					2000
-				);
+				add_action( 'after_setup_theme', [ __CLASS__, 'setup_theme' ], 2000 );
 				do_action( 'wpe_after_theme_setup' );
 			},
 			1000
 		);
+	}
+
+	public static function head ()
+	{
+		?>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"><!--X-UA-Compatible is a document mode meta-tag that allows web authors to choose what version of Internet Explorer the page should be rendered as-->
+		<meta name="generator" content="WPEssential Theme Module <?php echo WPE_THEME_VERSION; ?>" />
+		<meta name="HandheldFriendly" content="True"><!--Include this tag in the head element of every page. This tells your M-Business Sync Server that you have optimized your page for being viewed on a mobile device. Without it, tables, JavaScript and certain image tags will be dropped when the page is downloaded.--->
+		<?php
+	}
+
+	public static function setup_theme ()
+	{
+		add_action( 'wp_head', [ __CLASS__, 'head' ] );
+		if ( ! isset( $content_width ) ) $content_width = 1170;
+		add_action( 'wp_body_open', 'wpe_header_template' );
+		add_action( 'wp_footer', 'wpe_footer_template', 0 );
 	}
 
 	public static function constants ()
