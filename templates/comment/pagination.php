@@ -5,7 +5,7 @@ if ( ! \defined( 'ABSPATH' ) ) {
 
 the_comments_pagination(
 	[
-		'prev_text' => '<span class="screen-reader-text">' . __( 'Previous', 'twentyseventeen' ) . '</span>',
-		'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'twentyseventeen' ) . '</span>',
+		'prev_text' => '<span class="screen-reader-text">' . esc_html__( 'Previous', 'twentyseventeen' ) . '</span>',
+		'next_text' => '<span class="screen-reader-text">' . esc_html__( 'Next', 'twentyseventeen' ) . '</span>',
 	]
 );

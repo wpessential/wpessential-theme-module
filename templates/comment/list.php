@@ -13,7 +13,7 @@ wp_list_comments(
 			'avatar_size' => apply_filters( 'wpe/comment/avatar_size', 100 ),
 			'style'       => apply_filters( 'wpe/comment/style', 'ol' ),
 			'short_ping'  => apply_filters( 'wpe/comment/short_ping', true ),
-			'reply_text'  => apply_filters( 'wpe/comment/reply_text', __( 'Reply', 'wpessential' ) ),
+			'reply_text'  => apply_filters( 'wpe/comment/reply_text', esc_html__( 'Reply', 'TEXT_DOMAIN' ) ),
 		]
 	)
 );

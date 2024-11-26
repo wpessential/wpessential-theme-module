@@ -16,8 +16,8 @@ $args    = apply_filters(
 			'add_args'  => false,
 			'mid_size'  => 4,
 			'end_size'  => 3,
-			'next_text' => __( 'Next', 'wpessential' ),
-			'prev_text' => __( 'Previous', 'wpessential' ),
+			'next_text' => esc_html__( 'Next', 'TEXT_DOMAIN' ),
+			'prev_text' => esc_html__( 'Previous', 'TEXT_DOMAIN' ),
 			'type'      => 'list',
 		],
 		$default

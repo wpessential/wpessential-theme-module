@@ -4,5 +4,5 @@ if ( ! \defined( 'ABSPATH' ) ) {
 }
 ?>
 <p class="wpe-info">
-	<?php _e( 'No posts were found matching your selection.', 'wpessential' ); ?>
+	<?php _e( 'No posts were found matching your selection.', 'TEXT_DOMAIN' ); ?>
 </p>

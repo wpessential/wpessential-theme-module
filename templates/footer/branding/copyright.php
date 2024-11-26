@@ -7,9 +7,9 @@ if ( ! \defined( 'ABSPATH' ) ) {
 	<p>
 		<?php
 		echo sprintf(
-			esc_html__( '© %s WPEssential - All Rights Reserved - Made By %s', 'wpessential' ),
+			esc_html__( '© %s WPEssential - All Rights Reserved - Made By %s', 'TEXT_DOMAIN' ),
 			date( 'Y' ),
-			'<a href="' . esc_url( 'wpessential.org' ) . '">' . esc_html__( 'WPEssenital', 'wpessential' ) . '</a>'
+			'<a href="' . esc_url( 'wpessential.org' ) . '">' . esc_html__( 'WPEssenital', 'TEXT_DOMAIN' ) . '</a>'
 		);
 		?>
 	</p>

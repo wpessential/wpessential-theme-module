@@ -7,7 +7,16 @@
 		"theme"
 	],
 	"homepage": "https://wpessential.org/",
-	"require": {},
+	"require": {
+		"php" : ">=7.4",
+		"ext-json" : "*",
+		"wpessential/wpessential-commons": "^1.0",
+		"wpessential/wpessential-images": "^2.0",
+		"wpessential/wpessential-menus": "^2.0",
+		"wpessential/wpessential-sidebars": "^2.0",
+		"wpessential/wpessential-widgets": "^1.0",
+		"wpessential/wpessential-theme-support": "^1.0"
+	},
 	"autoload": {
 		"psr-4": {
 			"WPEssential\\Theme\\": "inc/"
