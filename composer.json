@@ -1,11 +1,10 @@
 {
 	"name": "wpessential/wpessential-theme-module",
-	"type": "library",
 	"minimum-stability": "stable",
 	"description": "Help to build the WP theme.",
-	"keywords": [
-		"theme"
-	],
+	"type": "library",
+	"license": "GPL-3.0-or-later",
+	"keywords": [ "theme" ],
 	"homepage": "https://wpessential.org/",
 	"require": {
 		"php" : ">=7.4",
@@ -21,5 +20,11 @@
 		"psr-4": {
 			"WPEssential\\Theme\\": "inc/"
 		}
-	}
+	},
+	"authors": [
+		{
+			"name": "WPEssential",
+			"email": "ceo@wpessential.org"
+		}
+	]
 }
