@@ -29,15 +29,16 @@ final class ThemeSetup
 		Classes::constructor();
 
 		// Setup theme-specific actions and filters.
+		add_action( 'wpe_setup_theme', [ __CLASS__, 'setup_theme' ] );
 		add_action(
-			'wpe_setup_theme',
+			'after_setup_theme',
 			function ()
 			{
 				do_action( 'wpe_before_theme_setup' );
-				add_action( 'after_setup_theme', [ __CLASS__, 'setup_theme' ], 2000 );
+				do_action( 'wpe_setup_theme' );
 				do_action( 'wpe_after_theme_setup' );
 			},
-			1000
+			2000
 		);
 	}
 
