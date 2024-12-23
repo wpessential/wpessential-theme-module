@@ -7,6 +7,7 @@ use WPEssential\Library\Support;
 use WPEssential\Library\Sidebars;
 use WPEssential\Library\Images;
 use WPEssential\Library\Widget;
+use WPEssential\Library\Tgm;
 
 // Prevent direct script access.
 if ( ! \defined( 'ABSPATH' ) )
@@ -77,9 +78,11 @@ final class Classes
 				}
 
 				// Hook the callback into the 'wpe_before_theme_setup' action.
+				$class_obj = wpe_array_get( $action, 'callback.0' );
+				$class_obj = new $class_obj();
 				add_action(
 					'wpe_before_theme_setup',
-					wpe_array_get( $action, 'callback' ),
+					[ $class_obj, wpe_array_get( $action, 'callback.1' ) ],
 					wpe_array_get( $action, 'priority' )
 				);
 			}
