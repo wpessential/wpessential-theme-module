@@ -22,8 +22,6 @@ final class ThemeSetup
 	 */
 	public static function constructor ()
 	{
-		require_once __DIR__ . '/Functions/template.php';
-
 		Constants::constructor();
 		ThemeLoader::constructor();
 		Classes::constructor();
