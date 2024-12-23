@@ -68,7 +68,7 @@ final class Classes
 				if (
 					! wpe_array_get( $action, 'callback' ) ||
 					! wpe_array_get( $action, 'priority' ) ||
-					! class_exists( wpe_array_get( $action, 'callback' ) )
+					! class_exists( wpe_array_get( $action, 'callback.0' ) )
 				)
 				{
 					// Error message for invalid configuration.
