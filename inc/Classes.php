@@ -34,7 +34,7 @@ final class Classes
 		// Define the default list of actions to initialize libraries.
 		$action_list = apply_filters( 'wpe/theme/after_setup/hooks', [
 			'Support'  => [
-				'callback' => [ '\\WPEssential\\Library\\Support::class', 'constructor' ],
+				'callback' => [ Support::class, 'init' ],
 				'priority' => 10,
 			],
 			'Sidebars' => [
