@@ -54,7 +54,7 @@ final class Classes
 				'priority' => 50,
 			],
 			'Tgm'      => [
-				'callback' => [ 'WPEssential\Plugins\Assets\Tgm', 'constructor' ],
+				'callback' => [ Tgm::class, 'init' ],
 				'priority' => 60,
 			],
 		] );
