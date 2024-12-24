@@ -25,12 +25,8 @@ final class ThemeLoader
 	 */
 	public static function constructor ()
 	{
-		// Retrieve theme information.
-		$theme_info = wpe_theme_info();
-
 		// Construct the loader class name based on the theme namespace.
-		$theme_loader_class = "\\WPEssential\\Theme\\{$theme_info->NameSpace}\\Loader";
-
+		$theme_loader_class = Loader::class;
 		// Check if the loader class exists, then initialize it.
 		if ( class_exists( $theme_loader_class ) )
 		{
