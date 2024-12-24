@@ -6,3 +6,6 @@ if ( ! \defined( 'ABSPATH' ) ) {
 <a href="javascript:void(0)">
 	<i class="fas fa-login"></i>
 </a>
+<a href="javascript:void(0)">
+	<i class="fas fa-login"></i>
+</a>

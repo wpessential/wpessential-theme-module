@@ -23,7 +23,7 @@ final class Head
 	public static function constructor ()
 	{
 		// Hook into wp_head to add custom meta tags.
-		add_action( 'wp_head', [ __CLASS__, 'head' ] );
+		add_action( 'wp_head', [ __CLASS__, 'head' ], 1 );
 	}
 
 	/**
@@ -37,6 +37,12 @@ final class Head
 	public static function head ()
 	{
 		?>
+		<!-- Specifies the character encoding for the document, dynamically fetched from WordPress settings -->
+		<meta charset="<?php bloginfo( 'charset' ); ?>" />
+
+		<!-- Sets the viewport to ensure proper scaling and responsiveness on mobile devices -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 		<!-- Ensures compatibility with older versions of Internet Explorer -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 

@@ -1,5 +1,6 @@
 <?php
-if ( ! \defined( 'ABSPATH' ) ) {
+if ( ! \defined( 'ABSPATH' ) )
+{
 	exit; // Exit if accessed directly.
 }
 
@@ -24,8 +25,6 @@ $args    = apply_filters(
 	)
 );
 ?>
-<nav class="wpe-padination">
-	<?php
-	echo paginate_links( $args );
-	?>
+<nav class="wpe-pagination">
+	<?php echo paginate_links( $args ); ?>
 </nav>
