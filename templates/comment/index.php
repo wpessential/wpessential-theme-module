@@ -15,7 +15,6 @@ if ( post_password_required() )
 	return;
 }
 
-wp_enqueue_script( 'comment-reply' );
 do_action( 'wpe_before_comment_section' );
 ?>
 <div id="comments" class="wpe-comments-area <?php echo apply_filters( 'wpe/comment/area/classes', 'comments-area' ); ?>">

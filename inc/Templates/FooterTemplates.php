@@ -34,7 +34,7 @@ final class FooterTemplates
 	 *
 	 * @return void
 	 */
-	public function sidebar ()
+	public static function sidebar ()
 	{
 		include wpe_template_load( 'templates/footer/sidebar' );
 	}
@@ -44,7 +44,7 @@ final class FooterTemplates
 	 *
 	 * @return void
 	 */
-	public function menu ()
+	public static function menu ()
 	{
 		include wpe_template_load( 'templates/footer/branding/menu' );
 	}
@@ -54,7 +54,7 @@ final class FooterTemplates
 	 *
 	 * @return void
 	 */
-	public function copyright ()
+	public static function copyright ()
 	{
 		include wpe_template_load( 'templates/footer/branding/copyright' );
 	}
@@ -64,7 +64,7 @@ final class FooterTemplates
 	 *
 	 * @return void
 	 */
-	public function footer ()
+	public static function footer ()
 	{
 		include wpe_template_load( 'templates/footer/index' );
 	}

@@ -35,7 +35,7 @@ final class HeaderTemplates
 	 *
 	 * @return void
 	 */
-	public function page_loader ()
+	public static function page_loader ()
 	{
 		include wpe_template_load( 'templates/general/site', 'loader' );
 	}
@@ -45,7 +45,7 @@ final class HeaderTemplates
 	 *
 	 * @return void
 	 */
-	public function logo ()
+	public static function logo ()
 	{
 		include wpe_template_load( 'templates/general/logo' );
 	}
@@ -55,7 +55,7 @@ final class HeaderTemplates
 	 *
 	 * @return void
 	 */
-	public function menu ()
+	public static function menu ()
 	{
 		include wpe_template_load( 'templates/header/branding/menu' );
 	}
@@ -65,7 +65,7 @@ final class HeaderTemplates
 	 *
 	 * @return void
 	 */
-	public function buttons ()
+	public static function buttons ()
 	{
 		include wpe_template_load( 'templates/header/branding/buttons' );
 	}
@@ -75,7 +75,7 @@ final class HeaderTemplates
 	 *
 	 * @return void
 	 */
-	public function header ()
+	public static function header ()
 	{
 		include wpe_template_load( 'templates/header/index' );
 	}
