@@ -34,7 +34,7 @@ final class ThemeSetup
 		HeaderTemplates::constructor();
 		PostTemplates::constructor();
 		SidebarTemplates::constructor();
-		CommentsTemplates::comments();
+		CommentsTemplates::constructor();
 		FooterTemplates::constructor();
 
 		// Setup theme-specific actions and filters.

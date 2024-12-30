@@ -6,7 +6,7 @@ use WPEssential\Library\Menus;
 use WPEssential\Library\Support;
 use WPEssential\Library\Sidebars;
 use WPEssential\Library\Images;
-use WPEssential\Library\Widget;
+use WPEssential\Library\WPERegCPT;
 use WPEssential\Library\Tgm;
 
 // Prevent direct script access.
@@ -43,7 +43,7 @@ final class Classes
 				'priority' => 20,
 			],
 			'Widgets'  => [
-				'callback' => [ Widget::class, 'init' ],
+				'callback' => [ WPERegCPT::class, 'init' ],
 				'priority' => 30,
 			],
 			'Images'   => [
