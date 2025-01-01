@@ -9,13 +9,13 @@
 	"require": {
 		"php" : ">=7.4",
 		"ext-json" : "*",
-		"wpessential/wpessential-commons": "^1.0.9",
+		"wpessential/wpessential-commons": "^1.1",
 		"wpessential/wpessential-images": "^2.0",
-		"wpessential/wpessential-menus": "^2.0",
+		"wpessential/wpessential-menus": "^2.0.1",
 		"wpessential/wpessential-sidebars": "^2.0",
 		"wpessential/wpessential-widgets": "^1.0.5",
 		"wpessential/wpessential-theme-support": "^1.0.2",
-		"wpessential/wpessential-postypes": "^0.1.2"
+		"wpessential/wpessential-postypes": "^0.2"
 	},
 	"autoload": {
 		"psr-4": {
