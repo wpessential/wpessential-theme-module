@@ -26,7 +26,7 @@ final class Constants
 	 */
 	public static function constructor ()
 	{
-		defined( 'WPE_THEME_BUILDER_VERSION' ) || define( 'WPE_THEME_BUILDER_VERSION', '1.0' );
+		\defined( 'WPE_THEME_BUILDER_VERSION' ) || \define( 'WPE_THEME_BUILDER_VERSION', '1.0' );
 
 		// Retrieve theme information (likely from a utility function `wpe_theme_info()`).
 		$theme_info = wpe_theme_info();
@@ -36,6 +36,9 @@ final class Constants
 			"{$theme_info->UcwordsNameHyphen}_T_VER" => $theme_info->Version,
 			"{$theme_info->UcwordsNameHyphen}_T_DIR" => get_stylesheet_directory() . '/',
 			"{$theme_info->UcwordsNameHyphen}_T_URI" => get_stylesheet_directory_uri() . '/',
+			"{$theme_info->UpperNameHyphen}_T_VER" => $theme_info->Version,
+			"{$theme_info->UpperNameHyphen}_T_DIR" => get_stylesheet_directory() . '/',
+			"{$theme_info->UpperNameHyphen}_T_URI" => get_stylesheet_directory_uri() . '/',
 		];
 
 		// Allow developers to filter and modify the constants.

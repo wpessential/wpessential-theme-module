@@ -70,3 +70,5 @@ final class ThemeSetup
 		wp_link_pages( [ 'echo' => 0 ] );
 	}
 }
+
+ThemeSetup::constructor();
