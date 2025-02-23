@@ -14,7 +14,7 @@
 		"wpessential/wpessential-menus": "^2.0.2",
 		"wpessential/wpessential-sidebars": "^2.0",
 		"wpessential/wpessential-widgets": "^1.0.5",
-		"wpessential/wpessential-theme-support": "^1.0.3",
+		"wpessential/wpessential-theme-support": "^1.0.2",
 		"wpessential/wpessential-postypes": "^0.2.2"
 	},
 	"autoload": {
