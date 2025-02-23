@@ -1,17 +1,21 @@
 <?php
-if ( ! \defined( 'ABSPATH' ) ) {
+if ( ! \defined( 'ABSPATH' ) )
+{
 	exit; // Exit if accessed directly.
 }
 ?>
-<div class="wpe-logo">
+<div class="<?php echo apply_filters( 'wpe_logo_classes', 'wpe-logo ' ); ?>">
 	<h1>
 		<?php
-		if ( has_custom_logo() ) {
+		if ( has_custom_logo() )
+		{
 			the_custom_logo();
 		}
-		else {
+		else
+		{
 			$blog_info = get_bloginfo( 'name' );
-			if ( ! empty( $blog_info ) ) {
+			if ( ! empty( $blog_info ) )
+			{
 				?>
 				<a class="wpe-a" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<?php
@@ -24,7 +28,8 @@ if ( ! \defined( 'ABSPATH' ) ) {
 		?>
 	</h1>
 	<?php
-	if ( ! has_custom_logo() ) {
+	if ( ! has_custom_logo() )
+	{
 		$description = get_bloginfo( 'description', 'display' );
 		if ( $description ) :
 			?>
