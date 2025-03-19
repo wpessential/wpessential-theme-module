@@ -35,7 +35,7 @@ final class SidebarTemplates
 	 */
 	public static function before ()
 	{
-		include wpe_template_load( 'templates/sidebar/before' );
+		wpe_template_load( 'templates/sidebar/before', '', true, true );
 	}
 
 	/**
@@ -57,6 +57,6 @@ final class SidebarTemplates
 	 */
 	public static function after ()
 	{
-		include wpe_template_load( 'templates/sidebar/after' );
+		wpe_template_load( 'templates/sidebar/after', '', true, true );
 	}
 }

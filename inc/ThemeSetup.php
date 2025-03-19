@@ -6,6 +6,7 @@ namespace WPEssential\Theme;
 use WPEssential\Theme\Templates\CommentsTemplates;
 use WPEssential\Theme\Templates\FooterTemplates;
 use WPEssential\Theme\Templates\HeaderTemplates;
+use WPEssential\Theme\Templates\PageTitleBannerTemplates;
 use WPEssential\Theme\Templates\PostTemplates;
 use WPEssential\Theme\Templates\SidebarTemplates;
 
@@ -22,6 +23,25 @@ if ( ! \defined( 'ABSPATH' ) )
 final class ThemeSetup
 {
 	/**
+	 * Performs the setup of theme-related features and templates.
+	 *
+	 * @return void
+	 */
+	public static function setup_theme ()
+	{
+		Head::constructor();
+
+		// Set default content width.
+		if ( ! isset( $content_width ) )
+		{
+			$content_width = 1170;
+		}
+
+		// Ensures proper page linking.
+		wp_link_pages( [ 'echo' => 0 ] );
+	}
+
+	/**
 	 * Initializes core theme components and hooks.
 	 *
 	 * @return void
@@ -31,6 +51,7 @@ final class ThemeSetup
 		Constants::constructor();
 		ThemeLoader::constructor();
 		Classes::constructor();
+		PageTitleBannerTemplates::constructor();
 		HeaderTemplates::constructor();
 		PostTemplates::constructor();
 		SidebarTemplates::constructor();
@@ -49,25 +70,6 @@ final class ThemeSetup
 			},
 			2000
 		);
-	}
-
-	/**
-	 * Performs the setup of theme-related features and templates.
-	 *
-	 * @return void
-	 */
-	public static function setup_theme ()
-	{
-		Head::constructor();
-
-		// Set default content width.
-		if ( ! isset( $content_width ) )
-		{
-			$content_width = 1170;
-		}
-
-		// Ensures proper page linking.
-		wp_link_pages( [ 'echo' => 0 ] );
 	}
 }
 

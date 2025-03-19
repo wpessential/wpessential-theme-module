@@ -38,7 +38,7 @@ final class CommentsTemplates
 	 */
 	public static function title ()
 	{
-		include wpe_template_load( 'templates/comment/title' );
+		wpe_template_load( 'templates/comment/title', '', true, true );
 	}
 
 	/**
@@ -48,7 +48,7 @@ final class CommentsTemplates
 	 */
 	public static function form ()
 	{
-		include wpe_template_load( 'templates/comment/form' );
+		wpe_template_load( 'templates/comment/form', '', true, true );
 	}
 
 	/**
@@ -58,7 +58,7 @@ final class CommentsTemplates
 	 */
 	public static function list ()
 	{
-		include wpe_template_load( 'templates/comment/list' );
+		wpe_template_load( 'templates/comment/list', '', true, true );
 	}
 
 	/**
@@ -68,7 +68,7 @@ final class CommentsTemplates
 	 */
 	public static function comments ()
 	{
-		include wpe_template_load( 'templates/comment/index' );
+		wpe_template_load( 'templates/comment/index', '', true, true );
 	}
 
 	/**
@@ -78,7 +78,7 @@ final class CommentsTemplates
 	 */
 	public static function closed ()
 	{
-		include wpe_template_load( 'templates/comment/close' );
+		wpe_template_load( 'templates/comment/close', '', true, true );
 	}
 
 	/**
@@ -88,6 +88,6 @@ final class CommentsTemplates
 	 */
 	public static function pagination ()
 	{
-		include wpe_template_load( 'templates/comment/pagination' );
+		wpe_template_load( 'templates/comment/pagination', '', true, true );
 	}
 }

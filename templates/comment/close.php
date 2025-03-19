@@ -1,5 +1,6 @@
 <?php
-if ( ! \defined( 'ABSPATH' ) ) {
+if ( ! \defined( 'ABSPATH' ) )
+{
 	exit; // Exit if accessed directly.
 }
 if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>

@@ -27,7 +27,7 @@ final class HeaderTemplates
 		add_action( 'wpe_header', [ __CLASS__, 'logo' ] );
 		add_action( 'wpe_header', [ __CLASS__, 'menu' ], 20 );
 		add_action( 'wpe_header', [ __CLASS__, 'buttons' ], 30 );
-		add_action( 'wp_body_open', [ __CLASS__, 'header' ] );
+		add_action( 'wp_body_open', [ __CLASS__, 'header' ], 0 );
 	}
 
 	/**
@@ -37,7 +37,7 @@ final class HeaderTemplates
 	 */
 	public static function page_loader ()
 	{
-		include wpe_template_load( 'templates/general/site', 'loader' );
+		wpe_template_load( 'templates/general/site', 'loader', true, true );
 	}
 
 	/**
@@ -47,7 +47,7 @@ final class HeaderTemplates
 	 */
 	public static function logo ()
 	{
-		include wpe_template_load( 'templates/general/logo' );
+		wpe_template_load( 'templates/general/logo', '', true, true );
 	}
 
 	/**
@@ -57,7 +57,7 @@ final class HeaderTemplates
 	 */
 	public static function menu ()
 	{
-		include wpe_template_load( 'templates/header/branding/menu' );
+		wpe_template_load( 'templates/header/branding/menu', '', true, true );
 	}
 
 	/**
@@ -67,7 +67,7 @@ final class HeaderTemplates
 	 */
 	public static function buttons ()
 	{
-		include wpe_template_load( 'templates/header/branding/buttons' );
+		wpe_template_load( 'templates/header/branding/buttons', '', true, true );
 	}
 
 	/**
@@ -77,6 +77,6 @@ final class HeaderTemplates
 	 */
 	public static function header ()
 	{
-		include wpe_template_load( 'templates/header/index' );
+		wpe_template_load( 'templates/header/index', '', true, true );
 	}
 }

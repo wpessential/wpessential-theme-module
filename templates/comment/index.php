@@ -17,7 +17,7 @@ if ( post_password_required() )
 
 do_action( 'wpe_before_comment_section' );
 ?>
-<div id="comments" class="wpe-comments-area <?php echo apply_filters( 'wpe/comment/area/classes', 'comments-area' ); ?>">
+	<div id="comments" class="wpe-comments-area <?php echo apply_filters( 'wpe/comment/area/classes', 'comments-area' ); ?>">
 	<?php
 	if ( have_comments() )
 	{

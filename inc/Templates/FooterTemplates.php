@@ -23,10 +23,10 @@ final class FooterTemplates
 	 */
 	public static function constructor ()
 	{
-		add_action( 'wpe_footer', [ __CLASS__, 'sidebar' ], 10 );
-		add_action( 'wpe_footer', [ __CLASS__, 'menu' ], 20 );
-		add_action( 'wpe_footer', [ __CLASS__, 'copyright' ], 30 );
 		add_action( 'wp_footer', [ __CLASS__, 'footer' ], 0 );
+		add_action( 'wpe_footer', [ __CLASS__, 'sidebar' ], 10 );
+		add_action( 'wpe_footer_bottom', [ __CLASS__, 'copyright' ], 10 );
+		add_action( 'wpe_footer_bottom', [ __CLASS__, 'menu' ], 20 );
 	}
 
 	/**
@@ -36,7 +36,7 @@ final class FooterTemplates
 	 */
 	public static function sidebar ()
 	{
-		include wpe_template_load( 'templates/footer/sidebar' );
+		wpe_template_load( 'templates/footer/sidebar', '', true, true );
 	}
 
 	/**
@@ -46,7 +46,7 @@ final class FooterTemplates
 	 */
 	public static function menu ()
 	{
-		include wpe_template_load( 'templates/footer/branding/menu' );
+		wpe_template_load( 'templates/footer/branding/menu', '', true, true );
 	}
 
 	/**
@@ -56,7 +56,7 @@ final class FooterTemplates
 	 */
 	public static function copyright ()
 	{
-		include wpe_template_load( 'templates/footer/branding/copyright' );
+		wpe_template_load( 'templates/footer/branding/copyright', '', true, true );
 	}
 
 	/**
@@ -66,6 +66,7 @@ final class FooterTemplates
 	 */
 	public static function footer ()
 	{
-		include wpe_template_load( 'templates/footer/index' );
+		wpe_template_load( 'templates/footer/index', '', true, true );
+		wpe_template_load( 'templates/woo/cart', 'popup', true, true );
 	}
 }

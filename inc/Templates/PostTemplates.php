@@ -51,8 +51,9 @@ final class PostTemplates
 	 */
 	public static function format ( $format = 'image', $image_size = 'thumbnail' )
 	{
+		if ( ! $format ) $format = 'image';
 		// Dynamically calls the template method for the specified post format.
-		return call_user_func( [ __CLASS__, $format ], $image_size );
+		return \call_user_func( [ __CLASS__, $format ], $image_size );
 	}
 
 	/**
@@ -170,7 +171,7 @@ final class PostTemplates
 	 */
 	public static function before ()
 	{
-		include wpe_template_load( 'templates/post/before', 'loop' );
+		wpe_template_load( 'templates/post/before', 'loop', true, true );
 	}
 
 	/**
@@ -180,9 +181,7 @@ final class PostTemplates
 	 */
 	public static function loop ()
 	{
-		//do_action( 'wpe_before_loop' );
-		include wpe_template_load( 'templates/post/index' );
-		//do_action( 'wpe_after_loop' );
+		wpe_template_load( 'templates/post/index', '', true, true );
 	}
 
 	/**
@@ -192,7 +191,7 @@ final class PostTemplates
 	 */
 	public static function before_post ()
 	{
-		include wpe_template_load( 'templates/post/before', 'post' );
+		wpe_template_load( 'templates/post/before', 'post', true, true );
 	}
 
 	/**
@@ -202,7 +201,7 @@ final class PostTemplates
 	 */
 	public static function pagination ( $args = [] )
 	{
-		include wpe_template_load( 'templates/post/pagination' );
+		wpe_template_load( 'templates/post/pagination', '', true, true );
 	}
 
 	/**
@@ -212,7 +211,7 @@ final class PostTemplates
 	 */
 	public static function no_posts ()
 	{
-		include wpe_template_load( 'templates/post/no', 'posts' );
+		wpe_template_load( 'templates/post/no', 'posts', true, true );
 	}
 
 	/**
@@ -222,7 +221,7 @@ final class PostTemplates
 	 */
 	public static function after_post ()
 	{
-		include wpe_template_load( 'templates/post/after', 'post' );
+		wpe_template_load( 'templates/post/after', 'post', true, true );
 	}
 
 	/**
@@ -232,6 +231,6 @@ final class PostTemplates
 	 */
 	public static function after ()
 	{
-		include wpe_template_load( 'templates/post/after', 'loop' );
+		wpe_template_load( 'templates/post/after', 'loop', true, true );
 	}
 }

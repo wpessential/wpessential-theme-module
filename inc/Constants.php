@@ -36,9 +36,9 @@ final class Constants
 			"{$theme_info->UcwordsNameHyphen}_T_VER" => $theme_info->Version,
 			"{$theme_info->UcwordsNameHyphen}_T_DIR" => get_stylesheet_directory() . '/',
 			"{$theme_info->UcwordsNameHyphen}_T_URI" => get_stylesheet_directory_uri() . '/',
-			"{$theme_info->UpperNameHyphen}_T_VER" => $theme_info->Version,
-			"{$theme_info->UpperNameHyphen}_T_DIR" => get_stylesheet_directory() . '/',
-			"{$theme_info->UpperNameHyphen}_T_URI" => get_stylesheet_directory_uri() . '/',
+			"{$theme_info->UpperNameHyphen}_T_VER"   => $theme_info->Version,
+			"{$theme_info->UpperNameHyphen}_T_DIR"   => get_stylesheet_directory() . '/',
+			"{$theme_info->UpperNameHyphen}_T_URI"   => get_stylesheet_directory_uri() . '/',
 		];
 
 		// Allow developers to filter and modify the constants.
