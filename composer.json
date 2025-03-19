@@ -10,7 +10,7 @@
 		"php" : ">=7.4",
 		"ext-json" : "*",
 		"wpessential/wpessential-commons": "^1.1.3",
-		"wpessential/wpessential-images": "^2.0.1",
+		"wpessential/wpessential-images": "^2.0.2",
 		"wpessential/wpessential-menus": "^2.0.3",
 		"wpessential/wpessential-postypes": "^0.2.3",
 		"wpessential/wpessential-sidebars": "^2.0.1",
